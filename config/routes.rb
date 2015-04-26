@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   #patch "/wines/:id" => "wines#update"
   #delete "/wines/:id" => "wines#destroy"
 
-  resources :wines
+  resources :wines do
+    get 'page/:page', :action => :index, :on => :collection
+  end
+  root 'wines#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
