@@ -40,4 +40,14 @@ class WineTest < ActiveSupport::TestCase
     assert_equal 'United States', found_wine.country
     assert_equal 'Merlot', found_wine.varietal
   end
+
+  test "update from a fixture" do
+    wine = wine(:franzia)
+    delta = 0.001
+    assert_in_delta 2015, wine.year, delta
+    wine.price = 2014
+    wine.save
+    updated = Wine.find(wine.id)
+    assert_in_delta 2014, updated.year, delta
+  end
 end
