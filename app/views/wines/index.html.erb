@@ -2,6 +2,9 @@
 <p>Available as of <%= formatted_time(@available_at) %></p>
 <ol>
 <% @wines.each do |wine| %>
-  <li><%= wine %></li>
+  <li>
+    <%= link_to(wine.name, wine) %>
+    by <%= wine.winery %>, Varietal: <%= wine.varietal %>
+  </li>
 <% end %>
 </ol>

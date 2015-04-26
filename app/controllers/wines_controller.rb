@@ -1,6 +1,9 @@
 class WinesController < ApplicationController
   def index
     @available_at = Time.now
-    @wines = ["Franzia", "Apothic", "Trader Joes", "Yellow Tail"]
+    @wines = Wine.all
+  end
+  def show
+    @wine = Wine.find(params[:id])
   end
 end
