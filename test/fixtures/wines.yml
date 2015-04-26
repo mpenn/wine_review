@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  year: 1
-  winery: MyString
-  country: MyString
-  varietal: MyString
+franzia:
+  name: 'Franzia'
+  year: 2015
+  winery: 'Franzia Winery'
+  country: 'United States'
+  varietal: 'Merlot'
 
-two:
-  name: MyString
-  year: 1
-  winery: MyString
-  country: MyString
-  varietal: MyString
+apothic:
+  name: 'Apothic'
+  year: 2014
+  winery: 'Apothic Winery'
+  country: 'France'
+  varietal: 'Merlot'
