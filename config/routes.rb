@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  #resources :reviews
+
   #get "/wines" => "wines#index", as: 'wines'
   #get "/wines/new" => "wines#new", as: 'new_wine'
   #get "/wines/:id" => "wines#show", as: 'wine'
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
   #delete "/wines/:id" => "wines#destroy"
 
   resources :wines do
+    resources :reviews
     get 'page/:page', :action => :index, :on => :collection
   end
   root 'wines#index'
